@@ -1,22 +1,28 @@
-  # LG v20救砖教程
+# LG v20救砖教程
 
+## 本教程根据MIT协议发布，继续阅读即代表您同意协议内容。
 ## **我不对因本教程的操作导致您的手机主板击穿或其他任何问题负责**
-本教程对所有arb1机型 (目前无解) ，或gpt分区被清机型不适用 (这种情况必须根据gpt表写xml文件，我没有时间，也不会写)。
+本教程对arb1机型 (如果你能搞到arb1的firehouse文件，当我没说) ，及分区被清机型不适用 (这种情况必须根据分区表生成xml文件，我没有时间)。
 
 *写在前面：2019年3月8日，我的 vs995 因在 fastboot 执行命令：*
 
     fastboot erase devcfg
 
 *重启后变成黑砖，按开机键、连电脑均无反应，本来打算再买个新主板凑活用，但是发现这手机板子没几个卖的，凑巧又发现9008短接点，于是打算自己修复。*
-## 准备部分
- 1. 9008驱动: https://www.mylgphones.com/lg-android-usb-device%20drivers
-1. qfil(包含在QPST中):https://www.qpstflash.com/
-2. firehouse文件:https://androidfilehost.com/?fid=11410963190603866856 或参考我以前发的贴子内的下载地址
-   
-    安装好驱动，QPST。
+## 一 准备部分
+* 9008驱动: <a href>https://www.mylgphones.com/lg-android-usb-device%20drivers</a>
+* qfil(包含在QPST中): <a href>https://www.qpstflash.com/</a>
+* firehouse文件: <a href>https://androidfilehost.com/?fid=11410963190603866856</a>  或参考我以前发的贴子内的下载地址
+* 安装好驱动，QPST工具包
     
-## 读取手机分区表
-
-1. 安上电池，短接9008测试点，插上电脑安装驱动。
-
-2. 
+## 二 读取手机分区表
+* 如果你的电脑没有连接过9008模式的手机(否则跳过)
+    1. 安上电池，短接9008测试点，不要松手，手机用数据线连接电脑安装驱动，电脑出现提示音后松手。
+    2. 断开连接，拔下电池3秒以上。
+* 打开QFIL，在配置中将芯片类型改为UFS，勾选“刷写后重置”后确认。
+* 打开v20的firehouse文件。
+* 在“Tools”中找到“Partition Manager”选项，鼠标移到选项上。
+* 插上电池，短接测试点，连接电脑后松手，迅速按下“Partition Manager”按钮，并点击确定，电脑会将firehouse文件下载到手机。如果出现诸如“rx 0”等错误，很可能是你点击的速度不够快，请再执行一遍此操作。
+## 三  刷写镜像 
+* 在弹出的分区刷写框中，选择你要重新刷写的分区，右键选择“Download”，在文件管理器中找到对应分区镜像文件刷入。
+* 
