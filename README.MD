@@ -1,4 +1,4 @@
-此教程已转移至本人博客[lxwx 的备忘录](https://www.lxtend.com/lgv20-unbrick/)
+此教程已转移至本人博客[ lxwx 的备忘录](https://www.lxtend.com/lgv20-unbrick/)
 
 # LG v20救砖教程 @lxwx in gfan
 
